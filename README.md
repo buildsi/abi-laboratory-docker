@@ -12,6 +12,12 @@ Build the container:
 $ docker build -t ghcr.io/buildsi/abi-laboratory-docker .
 ```
 
+or you can just use the one that we provide on [GitHub packages](https://github.com/buildsi/abi-laboratory-docker/pkgs/container/abi-laboratory-docker):
+
+```bash
+$ docker pull ghcr.io/buildsi/abi-laboratory-docker
+```
+
 You can then mount some directory with files to check, and then target
 files relative to that path in the container. As an example, knowing
 that I have two versions of zlib under this root I might do:
