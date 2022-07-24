@@ -28,7 +28,14 @@ $ old=zlib-1.2.8-mtdthhgpvdcqsfmbqzzvdlvain56j6th/lib/libz.so
 $ spack_dir=$HOME/Desktop/Code/spack-vsoch/opt/spack/linux-ubuntu20.04-skylake/gcc-9.3.0
 $ docker run -it -v $spack_dir/:/data ghcr.io/buildsi/abi-laboratory-docker $old $new
 ```
-Note that we are binding to `/data`, which also happens to be the working directory.
+
+Note that we are binding to `/data`, which also happens to be the working directory. You can also add a name:
+
+```
+$ docker run -it -v $spack_dir/:/data ghcr.io/buildsi/abi-laboratory-docker $old $new zlib
+```
+
+Here is what the output looks like!
 
 ```bash
 Reading debug-info
