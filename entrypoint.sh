@@ -1,7 +1,7 @@
 #!/bin/bash
 
 old=$1
-new=$2u
+new=$2
 
 if [ -z "${old+xxx}" ]; then echo "Missing first argument, old library"; exit 1; fi
 if [ -z "${new+xxx}" ]; then echo "Missing second argument, new library"; exit 1; fi
