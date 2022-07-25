@@ -29,10 +29,16 @@ $ spack_dir=$HOME/Desktop/Code/spack-vsoch/opt/spack/linux-ubuntu20.04-skylake/g
 $ docker run -it -v $spack_dir/:/data ghcr.io/buildsi/abi-laboratory-docker $old $new
 ```
 
-Note that we are binding to `/data`, which also happens to be the working directory. You can also add a name:
+Note that we are binding to `/data`, which also happens to be the working directory. You can also add a name for the result:
 
-```
+```bash
 $ docker run -it -v $spack_dir/:/data ghcr.io/buildsi/abi-laboratory-docker $old $new zlib
+```
+
+Or to write a report to a specific path (that won't be cleaned up):
+
+```bash
+$ docker run -it -v $spack_dir/:/data ghcr.io/buildsi/abi-laboratory-docker $old $new zlib /tmp/report.html
 ```
 
 Here is what the output looks like!
